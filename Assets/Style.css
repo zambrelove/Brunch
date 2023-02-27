@@ -1,0 +1,285 @@
+    /* ===== Globle CSS Start Here ===== */
+        *{
+            padding: 0px; margin: 0px; box-sizing: border-box;
+            border: none; outline: transparent; text-decoration: none; list-style: none; 
+            transition: all 0.5s;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        /* --- Color palette --- */
+            :root{
+                --primary-color: #000000;
+                --secoundry-color: #666666;
+                --theme-color:  #ea9f4a;
+                --white-color: white;
+            }
+
+        /* --- Typography --- */
+            @font-face {
+                font-family: OpenSans;
+                src: url("./Goggle_Font/Open_Sans/OpenSans-Regular.ttf");
+            }
+
+        /* Basic classes & other declaration */
+            .container{
+                width: 100%;
+                padding: 0px 15px; margin: 0 auto;
+            }
+
+            a{
+                color: var(--primary-color);
+            }
+            img{
+                width: 100%; height: 100%;
+            }
+            .Btn{
+                position: relative;
+                display: inline-block;
+                padding: 7px 15px;
+                border-radius: 20px;
+                color: var(--theme-color); background-color: var(--white-color);
+                filter: drop-shadow(0px 0px 6.5px rgba(12, 13, 12, 0.232));
+            }
+            .Btn:hover{
+                color: var(--primary-color); 
+                background-color: var(--theme-color);
+            }
+    /* ===== Globle CSS End Here ===== */
+/* --------------------------------------------------------------------------------------------------------------------- */
+                                   
+    /* ===== All Webpage CSS Start Here ===== */
+
+            header{
+                width: 100%;
+                background-image: url("./Images/Hero_Section/Hero_bg.png");
+                background-size: 100%; background-repeat: no-repeat;
+                position: relative;
+                overflow: hidden;
+                z-index: 0;
+            }
+            nav{
+                padding: 15px 0;
+            }
+            .Navbar{
+                display: flex; align-items: center; justify-content: space-between;
+            }
+            .Top_logo{
+                width: 150px;
+            }
+            .Sidebar_Menu{
+                width: 70vw; height: 100vh;
+                position: absolute; top: 0; right: -100%;
+                background-color: var(--theme-color);
+                box-shadow: 0px 0px 40px var(--primary-color);
+                display: flex; flex-direction: column; align-items: center; justify-content: center;
+                z-index: 999;
+            }
+            .Sidebar_Menu ul li a{
+                font-style: 22px;
+                color: var(--primary-color);
+                margin-bottom: 20px;
+                display: block;
+            }
+            .active.Sidebar_Menu{
+                right: 0;
+            }
+            .Desktop_link{
+                display: none;
+            }
+            .fa-bars, .fa-xmark{
+                cursor: pointer;
+            }
+            .fa-xmark{
+                font-size: 22px;
+                position: absolute; top: 2.5vh; right: 4.5vw;
+            }
+
+            .Hero_Section{
+                display: flex; flex-direction: column; justify-content: space-around;
+            }
+            
+            .Hero_Content{
+                padding: 40px 0px;
+                display: flex; flex-direction: column; gap: 20px; justify-content: space-around;
+            }
+            .Setion_Heading{
+                font-size: 28px;
+                font-family: OpenSans;
+                font-weight: 900;
+            }
+            .Setion_Paragraph{
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 100;
+                font-family: OpenSans;
+            }
+            .Hero_Content .Btn{
+                margin-right: auto;
+            }
+            .Sub_heading{
+                font-size: 24px;
+                font-weight: bolder;
+                font-family: OpenSans;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .Sub_Header_Wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+            .store, .cash, .wrap{
+                padding: 25px;
+                text-align: center;
+            }
+            .sub_img img{
+                width: 50%;
+            }
+
+            /* Order Now start here */
+                .Order_Now{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 25px;
+                }
+                .Order_Content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 25px;
+                }
+            /* Order Now start here */
+
+            /* Best Seller Section Start Here */
+                .Best_seller{
+                    padding-top: 55px;
+                }
+                .sub_heading{
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                .sub_P{
+                    font-size: 16px;
+                }
+                .item-1, .item-2, .item-3{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .item-1:hover .sub_img{
+                    background-image: url('./Images/Best_seller/best_seller-item-1-bg.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center center;
+                }
+                .item-2:hover .sub_img{
+                    background-image: url('./Images/Best_seller/best_seller_item-2-bg.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain; 
+                }
+                .item-3:hover .sub_img{
+                    background-image: url('./Images/Best_seller/best_seller_item-3-bg.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+                .sub_img img{
+                    width: 25%;
+                }
+            /* Best Seller Section End Here */
+
+            /* Profile Section Start Here */
+                .profile{
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+            /* Profile Section End Here */
+    /* ===== All Webpage CSS End Here ===== */
+/* --------------------------------------------------------------------------------------------------------------------- */
+                                    
+    /* ===== Media Start Quries  ===== */
+        @media screen and (min-width: 768px) {
+            .container{
+                width: 738px;
+            }
+            .Sidebar{
+                display: none;
+            }
+            .Desktop_link{
+                display: block;
+            }
+            .Desktop_link ul{
+                display: flex; gap: 25px;
+            }
+            .Desktop_link ul li a{
+                font-size: 18px;
+                color: var(--primary-color);
+            }
+            .Hero_Section{
+                padding: 50px 15px;
+                flex-direction: row; align-items: center; justify-content: space-evenly;
+            } 
+            .Hero_Content {
+                max-width: 60%;
+            }
+            .Setion_Heading{
+                font-size: 36px;
+            }
+            
+            .Sub_heading{
+                font-size: 26px;
+            }
+          
+            .Sub_Header_Wrapper{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                text-align: center;
+                gap: 25px; 
+                margin-top: 25px;
+            }
+            .sub_content{
+                margin-top: 25px;
+            }
+            .item-1, .item-2, .item-3{
+                margin-bottom: 0px;
+            }
+            /* Order Now start here */
+            .Order_Now{
+                flex-direction: row; 
+                align-items: center;
+                justify-content: space-around;
+                padding: 40px 15px;
+            }
+            .Order_Content{
+                width: 50%;
+            }
+        /* Order Now start here */
+        }
+        @media screen and (min-width:992px) {
+            .Setion_Heading{
+                font-size: 48px;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            .container{
+                width: 996px;
+            }
+        }
+        @media screen and (min-width: 1280px) {
+            .container{
+                width: 1250px;
+            }
+        }
+        @media screen and (min-width: 1440px) {
+            .container{
+                width: 1410px;
+            }
+        }
+    /* ===== Media End Quries ===== */
+
+
+
+/* ================================================= CSS File End Here =================================================== */
